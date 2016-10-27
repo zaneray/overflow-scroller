@@ -1,0 +1,25 @@
+{
+  "name": "overflow-scroller",
+  "main": "overflow-scroller.js",
+  "homepage": "https://github.com/zaneray/overflow-scroller",
+  "authors": [
+    "Jeremiah Martin <jeremiah@zaneray.com>"
+  ],
+  "description": "A simple package that allows you to easily implement a horizontal scroll with previous and next arrows for desktop users.",
+  "keywords": [
+    "touch",
+    "overflow",
+    "scroll",
+    "javascript",
+    "jquery",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
