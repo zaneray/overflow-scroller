@@ -1,0 +1,77 @@
+/*Please edit the less file not the CSS file then run a 'lessc' command */
+.overflow-scroller {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.overflow-scroller > * {
+  display: inline-block;
+}
+.no-hiddenscroll .overflow-scroller {
+  margin-bottom: -17px;
+}
+.overflow-scroller-outer {
+  position: relative;
+  overflow: hidden;
+}
+.overflow-scroller-arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: #fff;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-out;
+  padding: 8px 15px;
+  z-index: 100;
+}
+@media (min-width: 600px) {
+  .overflow-scroller-arrow {
+    left: 15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+.overflow-scroller-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.overflow-scroller-arrow.overflow-scroller-arrow-hide {
+  opacity: 0;
+  transform: translate(-65px, -50%);
+}
+.overflow-scroller-arrow-next {
+  right: 15px;
+  left: auto;
+  transform: rotate(180deg) translate(0, 50%);
+}
+.overflow-scroller-arrow-next.overflow-scroller-arrow-hide {
+  opacity: 0;
+  transform: rotate(180deg) translate(-65px, 50%);
+}
+.overflow-scroller-arrow:before {
+  content: '';
+  display: block;
+  width: 9.6px;
+  height: 9.6px;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  position: absolute;
+  transform: rotate(-135deg);
+  top: 34.5%;
+  left: 42%;
+}
+@media (min-width: 600px) {
+  .overflow-scroller-arrow:before {
+    width: 15px;
+    height: 15px;
+  }
+}

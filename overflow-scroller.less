@@ -1,0 +1,93 @@
+/*Please edit the less file not the CSS file then run a 'lessc' command */
+
+
+//variables customize as needed
+@arrow-size-small: 32px;
+@arrow-size: 50px;
+@screen-sm: 600px;
+@gutter-width: 15px; //should be the same as margin or padding on each element 
+
+
+//styles for overflow scroller
+.overflow-scroller {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+  padding-left: @gutter-width;
+  padding-right: @gutter-width;
+
+  &> * {
+    display: inline-block;
+  }
+
+  .no-hiddenscroll & { //modernizr feature detect. 
+    margin-bottom: -17px;
+  }  
+}
+
+.overflow-scroller-outer {
+  position: relative;
+  overflow: hidden;    
+}
+
+.overflow-scroller-arrow {
+  position: absolute;
+  width: @arrow-size-small;
+  height: @arrow-size-small;
+  top: 50%;
+  left: 10px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.6);
+  cursor: pointer;
+  color: #fff;
+  transform: translateY(-50%);
+  transition: all .3s ease-out;
+  padding: 8px 15px;
+  z-index: 100;
+  @media (min-width: @screen-sm) {
+    left: 15px;
+    width: @arrow-size;
+    height: @arrow-size;
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,.9);
+  }
+
+  &.overflow-scroller-arrow-hide {
+    opacity: 0;
+    transform: translate(((@arrow-size + 15) * -1), -50%); 
+  }
+
+  &-next {
+    right: 15px;
+    left: auto;
+    transform: rotate(180deg) translate(0, 50%);
+
+    &.overflow-scroller-arrow-hide {
+      opacity: 0;
+      transform: rotate(180deg) translate(((@arrow-size + 15) * -1), 50%); 
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: @arrow-size-small * .3;
+    height: @arrow-size-small * .3;
+
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    position: absolute;
+    transform: rotate(-135deg);
+    top: 34.5%;
+    left: 41%;
+    @media (min-width: @screen-sm) {
+      width: @arrow-size * .3;
+      height: @arrow-size * .3;
+    }
+  }
+}

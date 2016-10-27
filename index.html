@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Overflow Scroller</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700" rel="stylesheet">
+  <link href="overflow-scroller.css" rel="stylesheet">
+  <style>
+
+   
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      text-align: center;
+      font-size: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfcfc+0,edeff2+100 */
+      background: rgb(252,252,252); /* Old browsers */
+      background: -moz-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(237,239,242,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(237,239,242,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(252,252,252,1) 0%,rgba(237,239,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#edeff2',GradientType=0 ); /* IE6-9 */
+
+    }
+
+    a {
+      color: #00aed1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #008faf;
+      text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: 100;
+      text-transform: uppercase;
+      margin-top: 2em;
+      margin-bottom: .5em;
+    }
+
+    h1 {
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 7vw;
+      padding-top: 3em;
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    @media (min-width: 600px) {
+      h1 {  
+        font-size: 3.6vw;
+      }
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+
+    h4 {
+      font-size: 1.5em;
+    }
+
+    
+
+    img {
+      max-width: 100%;
+    }
+
+    .image-item {
+      width: 280px;
+      padding: 15px;
+    }
+
+    @media (min-width: 600px) {
+      .image-item {  
+        width: 360px;
+      }
+    }
+
+    pre, code {
+      font-size: .92em;
+    }
+
+    pre {
+      background: #29393d;
+      color: #fff;
+      border-radius: 2px;
+      padding: 15px;
+    }
+
+
+    .content {
+      padding: 4em 15px;
+      margin: 0 auto;
+      max-width: 600px;
+      line-height: 1.6em;
+      text-align: left;
+      
+    }
+
+  </style>
+  <script src="modernizr-custom.js"></script>
+</head>
+<body>
+  <h1>Overflow Scroller</h1>
+
+  <section class="overflow-scroller">
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c163.0.753.753/14726463_2149745985251456_3923220567812997120_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14482254_565260893669205_3496772556323553280_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c143.0.794.794/14373996_313779565646086_22003315025903616_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c191.0.698.698/14145328_295449170826699_497112261_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c136.0.808.808/14073289_289619111410076_125881873_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/14134949_173729363059445_1311565077_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c110.0.859.859/14052382_1680209678968017_111863488_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c127.0.826.826/13743534_283031258720594_90280931_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c120.0.840.840/13741414_854585991340935_2005679092_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13696737_597514057094700_1307239881_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c102.0.876.876/13827245_274002892980015_1364237770_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c180.0.720.720/13707187_1826573950907165_472489455_n.jpg">
+    </div>
+    <div class="image-item">
+      <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c60.0.959.959/13649265_1597633853867949_1408115842_n.jpg">
+    </div>
+  </section>
+  <section class="content">
+    <p>Overflow Scroller is a simple package of CSS and javascript that harnesses the simple <code>overflow: auto</code> behavior allowing for swipeability at mobile and on touch enabled devices (trackpads, magic mouse). On desktop devices it is enhanced to have previous and next arrows that control the scrolling. </p> 
+  
+    <h3>dependencies</h3>
+    <p>You can download Overflow Scroller <a href="#">here</a>. There are a couple dependencies, it will work fine without them but it provides a better experience &amp; performance if they are added.</p> 
+    <ul>
+      <li><strong><a href="https://modernizr.com/download/?-hiddenscroll-setclasses" target="_blank">Modernizr:</a></strong> Has browser feature detection for Hidden Scrollbars which is true for Mac OS and mobile OS. If 'hiddenscroll' is false (pc browser) the scrollbars will automatically be hidden.</li>
+      <li><strong><a href="http://benalman.com/projects/jquery-throttle-debounce-plugin/" target="_blank">Jquery Throttle Debounce:</a></strong> This adds the performace benefit of waiting until the scrolling is complete to show/hide the scrollbars. </li>
+    </ul>
+    <h3>Getting started</h3>
+    <p>Overflow scroller only requires a simple set of items in a div to get started, the use the css the containing div should have a class name of <code>overflow-scroller</code></p>
+    <h4>The Markup</h4>
+    <p>The HTML is pretty simple. A div with a collection of items that are ideally all the same height. </p>
+    <pre>
+&lt;div class="overflow-scroller"&gt;
+  &lt;div class="child-item"&gt;...&lt;/div&gt;
+  &lt;div class="child-item"&gt;...&lt;/div&gt;
+  &lt;div class="child-item"&gt;...&lt;/div&gt;
+  ....
+&lt;/div&gt;
+    </pre>
+    <h4>The Script</h4>
+    <p>Overflow scroller is written as a jQuery plugin, there are a few options you can pass to it as well. </p>
+
+    <ul>
+      <li>
+        <strong>scrollPercentage: </strong> A number from 0-1 which dictates how far each click on a previous or next arrow scrolls the container.<br>
+        <em>Default: .9</em>
+      </li>
+      <li>
+        <strong>scrollSpeed: </strong> A number in milliseconds indicating how fast the container scrolls.  <br>
+        <em>Default: 400</em>
+      </li>
+    </ul>
+    <pre>
+&lt;script&gt; 
+  $('.overflow-scroller').overflowScroller();
+
+  //passing options
+  $('.overflow-scroller').overflowScroller({
+    scrollPercentage: .9,
+    scrollSpeed: 400
+  });
+&lt;/script&gt;
+    </pre>
+    <h4>The Styles</h4>
+    <p>Feel free to overwrite the styles to your liking. There is a provided .less file and .css file. We use the less file to build the css file. Before creating a pull request make sure to edit the .less file and then run<br><code>lessc overflow-scroller.less overflow-scroller.css</code> </p>
+  </section>
+
+  
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="overflow-scroller.js"></script>
+  <script> 
+    $('.overflow-scroller').overflowScroller();
+  </script>
+
+</body>
+</html>
