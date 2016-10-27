@@ -1,6 +1,6 @@
 #Overflow Scroller
 
-Overflow Scroller is a simple package of CSS and javascript that harnesses the simple <code>overflow: auto</code> behavior allowing for swipeability at mobile and on touch enabled devices (trackpads, magic mouse). On desktop devices it is enhanced to have previous and next arrows that control the scrolling. 
+Overflow Scroller is a simple package of CSS and javascript that harnesses the simple <code>overflow: auto</code> behavior allowing for swipeability at mobile and on touch enabled devices (trackpads, magic mouse). On desktop devices it is enhanced to have previous and next arrows that control the scrolling. __[View the Demo here](https://zaneray.github.io/overflow-scroller/)__
   
 ## Dependencies
 There are a couple dependencies, it will work fine without them but it provides a better experience &amp; performance if they are added.
