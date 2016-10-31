@@ -10,7 +10,7 @@ Overflow Scroller is a simple package of CSS and javascript that harnesses the s
 There are a couple dependencies, it will work fine without them but it provides a better experience &amp; performance if they are added.
   
 * __[Modernizr:](https://modernizr.com/download/?-hiddenscroll-setclasses)__ Has browser feature detection for Hidden Scrollbars which is true for Mac OS and mobile OS. If 'hiddenscroll' is false (pc browser) the scrollbars will automatically be hidden.
-* __[Jquery Throttle Debounce:](http://benalman.com/projects/jquery-throttle-debounce-plugin/)__ This adds the performace benefit of waiting until the scrolling is complete to show/hide the scrollbars. 
+* __[Jquery Throttle Debounce:](http://benalman.com/projects/jquery-throttle-debounce-plugin/)__ This adds the performace benefit of waiting until the scrolling is complete to show/hide the  the previous/next arrows. 
 
 ## Getting Started
 Overflow scroller only requires a simple set of items in a div to get started, the use the css the containing div should have a class name of `overflow-scroller`

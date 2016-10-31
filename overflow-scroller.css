@@ -49,8 +49,8 @@
 @media (min-width: 600px) {
   .overflow-scroller-arrow {
     left: 15px;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
   }
 }
 .overflow-scroller-arrow:hover {
@@ -58,7 +58,7 @@
 }
 .overflow-scroller-arrow.overflow-scroller-arrow-hide {
   opacity: 0;
-  transform: translate(-65px, -50%);
+  transform: translate(-61px, -50%);
 }
 .overflow-scroller-arrow-next {
   right: 15px;
@@ -67,7 +67,7 @@
 }
 .overflow-scroller-arrow-next.overflow-scroller-arrow-hide {
   opacity: 0;
-  transform: rotate(180deg) translate(-65px, 50%);
+  transform: rotate(180deg) translate(-61px, 50%);
 }
 .overflow-scroller-arrow:before {
   content: '';
@@ -83,7 +83,7 @@
 }
 @media (min-width: 600px) {
   .overflow-scroller-arrow:before {
-    width: 15px;
-    height: 15px;
+    width: 13.8px;
+    height: 13.8px;
   }
 }
