@@ -15,7 +15,7 @@
   <link href="overflow-scroller.css" rel="stylesheet">
   <style>
 
-   
+
 
     * {
       box-sizing: border-box;
@@ -55,7 +55,7 @@
     h3,
     h4,
     h5 {
-      font-weight: 100;
+      font-weight: 300;
       text-transform: uppercase;
       margin-top: 2em;
       margin-bottom: .5em;
@@ -91,13 +91,26 @@
     }
 
     .image-item {
-      width: 280px;
-      padding: 15px;
+      width: 50%;
+      padding: 10px;
     }
 
     @media (min-width: 600px) {
       .image-item {  
-        width: 360px;
+        width: 33.33333%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+
+      .image-item {  
+        width: 25%;
+      }
+    }
+
+    @media (min-width: 1300px) {
+      .image-item {  
+        width: 20%;
       }
     }
 
@@ -124,19 +137,57 @@
       
     }
 
-     @media (max-width: 600px) {
+    @media (max-width: 600px) {
       .github-ribbon {  
         display: none;
       }
+    }
+
+
+    /*Carousel Scroller Custom Styles example */
+    .carousel-scroller {
+      padding: 0;
+    }
+
+
+    .carousel-item {
+      width: 100%;
+    }
+
+    .carousel-item img {
+      display: block;
     }
 
   </style>
   <script src="modernizr-custom.js"></script>
 </head>
 <body>
-<a href="https://github.com/zaneray/overflow-scroller" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <a href="https://github.com/zaneray/overflow-scroller" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
   <h1>Overflow Scroller</h1>
 
+  <h4>Carousel Example:</h4>
+  <section class="carousel-scroller overflow-scroller">
+    <div class="carousel-item">
+      <picture>
+        <source srcset="img/carousel-sample-1.jpg" media="(min-width: 768px)">
+        <img src="img/carousel-sample-1-mobile.jpg" alt="Cotopaxi at Sunset">
+       </picture>
+     </div>
+     <div class="carousel-item">
+      <picture>
+        <source srcset="img/carousel-sample-2.jpg" media="(min-width: 768px)">
+        <img src="img/carousel-sample-2-mobile.jpg" alt="Crisp Night on Lake MacDonald">
+       </picture>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source srcset="img/carousel-sample-3.jpg" media="(min-width: 768px)">
+        <img src="img/carousel-sample-3-mobile.jpg" alt="Quito, Ecuador">
+       </picture>
+    </div>
+  </section>
+
+  <h4>Gallery Example:</h4>
   <section class="overflow-scroller">
     <div class="image-item">
       <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c163.0.753.753/14726463_2149745985251456_3923220567812997120_n.jpg">
@@ -180,7 +231,7 @@
   </section>
   <section class="content">
     <p>Overflow Scroller is a simple package of CSS and javascript that harnesses the simple <code>overflow: auto</code> behavior allowing for swipeability at mobile and on touch enabled devices (trackpads, magic mouse). On desktop devices it is enhanced to have previous and next arrows that control the scrolling. </p> 
-  
+
     <h3>dependencies</h3>
     <p>You can download Overflow Scroller <a href="https://github.com/zaneray/overflow-scroller">here</a>. There are a couple dependencies, it will work fine without them but it provides a better experience &amp; performance if they are added.</p> 
     <ul>
@@ -192,12 +243,12 @@
     <h4>The Markup</h4>
     <p>The HTML is pretty simple. A div with a collection of items that are ideally all the same height. </p>
     <pre>
-&lt;div class="overflow-scroller"&gt;
-  &lt;div class="child-item"&gt;...&lt;/div&gt;
-  &lt;div class="child-item"&gt;...&lt;/div&gt;
-  &lt;div class="child-item"&gt;...&lt;/div&gt;
-  ....
-&lt;/div&gt;
+      &lt;div class="overflow-scroller"&gt;
+      &lt;div class="child-item"&gt;...&lt;/div&gt;
+      &lt;div class="child-item"&gt;...&lt;/div&gt;
+      &lt;div class="child-item"&gt;...&lt;/div&gt;
+      ....
+      &lt;/div&gt;
     </pre>
     <h4>The Script</h4>
     <p>Overflow scroller is written as a jQuery plugin, there are a few options you can pass to it as well. </p>
@@ -211,30 +262,47 @@
         <strong>scrollSpeed: </strong> A number in milliseconds indicating how fast the container scrolls.  <br>
         <em>Default: 400</em>
       </li>
+      <li>
+        <strong>snapPoints: </strong> Boolean to add or remove css snap-points which are partially supported, <a href="http://caniuse.com/#feat=css-snappoints">See here for current support</a>. CSS snap points properties can be customized in the CSS.   <br>
+        <em>Default: true</em>
+      </li>
     </ul>
     <pre>
-&lt;script&gt; 
+      &lt;script&gt; 
+      $('.overflow-scroller').overflowScroller();
+
+      //passing options
+      $('.overflow-scroller').overflowScroller({
+      scrollPercentage: .9,
+      scrollSpeed: 400,
+      snapPoints: false
+    });
+    &lt;/script&gt;
+  </pre>
+  <h4>The Styles</h4>
+  <p>Feel free to overwrite the styles to your liking. There is a provided .less file and .css file. We use the less file to build the css file. Before creating a pull request make sure to edit the .less file and then run<br><code>lessc overflow-scroller.less overflow-scroller.css</code> </p>
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="overflow-scroller.js"></script>
+<script> 
   $('.overflow-scroller').overflowScroller();
-
-  //passing options
-  $('.overflow-scroller').overflowScroller({
-    scrollPercentage: .9,
-    scrollSpeed: 400
-  });
-&lt;/script&gt;
-    </pre>
-    <h4>The Styles</h4>
-    <p>Feel free to overwrite the styles to your liking. There is a provided .less file and .css file. We use the less file to build the css file. Before creating a pull request make sure to edit the .less file and then run<br><code>lessc overflow-scroller.less overflow-scroller.css</code> </p>
-  </section>
-
-  
+</script>
 
 
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="overflow-scroller.js"></script>
-  <script> 
-    $('.overflow-scroller').overflowScroller();
-  </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86547929-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

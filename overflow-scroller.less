@@ -5,7 +5,7 @@
 @arrow-size-small: 32px;
 @arrow-size: 50px;
 @screen-sm: 600px;
-@gutter-width: 15px; //should be the same as margin or padding on each element 
+@gutter-width: 10px; //should be the same as margin or padding on each element 
 
 
 //styles for overflow scroller
@@ -26,6 +26,19 @@
   .no-hiddenscroll & { //modernizr feature detect. 
     margin-bottom: -17px;
   }  
+
+  &.snap-points {
+   -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+  /* older spec implementation */
+  -webkit-scroll-snap-destination: 0% 100%;
+      -ms-scroll-snap-destination: 0% 100%;
+          scroll-snap-destination: 0% 100%;
+  -webkit-scroll-snap-points-x: repeat(100%);
+      -ms-scroll-snap-points-x: repeat(100%);
+          scroll-snap-points-x: repeat(100%);
+ }
 }
 
 .overflow-scroller-outer {

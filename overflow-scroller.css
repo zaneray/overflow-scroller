@@ -6,14 +6,26 @@
   white-space: nowrap;
   font-size: 0;
   line-height: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .overflow-scroller > * {
   display: inline-block;
 }
 .no-hiddenscroll .overflow-scroller {
   margin-bottom: -17px;
+}
+.overflow-scroller.snap-points {
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  /* older spec implementation */
+  -webkit-scroll-snap-destination: 0% 100%;
+  -ms-scroll-snap-destination: 0% 100%;
+  scroll-snap-destination: 0% 100%;
+  -webkit-scroll-snap-points-x: repeat(100%);
+  -ms-scroll-snap-points-x: repeat(100%);
+  scroll-snap-points-x: repeat(100%);
 }
 .overflow-scroller-outer {
   position: relative;
@@ -67,7 +79,7 @@
   position: absolute;
   transform: rotate(-135deg);
   top: 34.5%;
-  left: 42%;
+  left: 41%;
 }
 @media (min-width: 600px) {
   .overflow-scroller-arrow:before {
