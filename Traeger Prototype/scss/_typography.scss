@@ -1,0 +1,28 @@
+@import "@material/typography/mdc-typography";
+
+.mdc-typography--headline1,
+.mdc-typography--headline2,
+.mdc-typography--headline3,
+.mdc-typography--headline4,
+.mdc-typography--headline5,
+.mdc-typography--headline6 {
+    font-family: Knockout;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: .8em
+}
+
+
+.headline--light {
+    font-weight: normal;
+}
+
+.headline--flexible {
+ &.mdc-typography--headline1 {
+     font-size:  11.111vw;
+     @media screen and (min-width: $mdc-) {
+
+     }
+ }
+}
+

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Knockout';
+    src: url("/fonts/Knockout-46_FlyWeight.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Knockout';
+    src: url("/fonts/Knockout-68.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
