@@ -11,20 +11,103 @@
   <link rel="stylesheet" href="styles/bundle.css">
 </head>
 <body>
-<header class="masthead">
-
-</header>
-<section class="hero-banner">
-  <picture>
-    <source srcset="/images/home/Roasted-Beer-Can-Chicken_001.jpg"
-            media="(min-width: 600px)">
-    <img src="/images/home/Roasted-Beer-Can-Chicken_001-mobile.jpg" alt="" class="hero-banner-image" />
-  </picture>
-  <div class="mdc-typography--headline1 headline--flexible" style="text-align: center"><span class="headline--light"> The Original Wood</span><br>Pellet Grill</div>
+<header id="masthead" class="masthead on-negative mdc-typography">
+  <div class="masthead-promo-bar">Free Shipping on orders over $250</div>
+  <div class="masthead-primary">
+    <div class="mdc-typography--headline5 faux-link faux-link">Pellet Grills</div>
+    <div class="mdc-typography--headline5 faux-link">Shop</div>
+    <div class="mdc-typography--headline5 faux-link">Recipes</div>
+    <div class="mdc-typography--headline5 faux-link">Learn</div>
+    <div class="mdc-typography--headline5 faux-link">Community</div>
+    <div class="mdc-typography--headline5 faux-link">Find a Dealer</div>
   </div>
-</section>
+</header>
+<div class="page">
+  <section class="hero-banner" id="hero-banner">
+    <picture>
+      <source data-srcset="/images/home/Roasted-Beer-Can-Chicken_001.jpg"
+              media="(min-width: 608px)">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+        data-src="/images/home/Roasted-Beer-Can-Chicken_001-mobile.jpg" alt="Beer Can Chicken"
+        class="hero-banner-image lazyload"/>
+    </picture>
+    <div class="hero-banner-content on-negative">
+      <h2 class="mdc-typography--headline1 headline--flexible hero-banner-headline"
+          style="text-align: center"><span
+        class="headline--light"> In this hood<br>Adults play with</span><br>Their Food
+      </h2>
+      <img src="/images/home/welcome-to-the-traegerhood.svg" class="hero-banner-wordmark"
+           alt="Welcome to the Traegerhood">
+      <button class="mdc-button button-icon  mdc-theme--on-primary">
 
+        <span class="mdc-button__label">Learn More</span>
+        <svg class="svg-icon">
+          <use xlink:href="#icon-skewer"/>
+        </svg>
 
+      </button>
+    </div>
+  </section>
+  <section id="hero-grill" class="hero-grill bg-texture on-negative">
+    <div id="hero-grill-content" class="hero-grill-content section-padding-large">
+      <h2 class="mdc-typography--headline1 headline--flexible hero-banner-headline"
+          style="text-align: center"><span
+        class="headline--light">The Original Wood</span><br>Pellet Grill
+      </h2>
+      <p class="mdc-typography--body1 hero-grill-body body--flexible">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sit amet neque ut aliquam. Aenean est
+        libero, aliquam nec odio sed, laoreet tempor lacus.
+      </p>
+    </div>
+    <div class="hero-grill-image-section">
+      <div class="hero-grill-image-wrapper">
+        <img src="/images/grills/Timberline-1300_Straight-w-Food_Silo.png" alt="Timberline 1300"
+             class="hero-grill-image"
+             id="hero-grill-image">
+      </div>
+      <img src="/images/home/transparent-smoke.png" alt=" " id="hero-smoke-1" class="hero-grill-smoke">
+      <img src="/images/home/transparent-smoke.png" alt=" " id="hero-smoke-2" class="hero-grill-smoke">
+    </div>
+  </section>
+  <section id="cascading-cards" class="cascading-cards mdc-layout-grid section-padding-large bg-texture">
+      <div id="card-1" class="content-card">
+        <h3 class="mdc-typography--headline2">hi</h3>
+      </div>
+      <div id="card-2" class="content-card">
+        <h3 class="mdc-typography--headline2">hi</h3>
+      </div>
+      <div  id="card-3" class="content-card">
+        <h3 class="mdc-typography--headline2">hi</h3>
+      </div>
+    </div>
+
+</div>
+<svg
+  aria-hidden="true"
+  focusable="false"
+  style="position: absolute; width: 0; height: 0; overflow: hidden;"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <symbol id="icon-skewer" viewBox="0 0 32 32">
+      <title>Skewer</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path
+          d="M0,13.2857143 L0,17.8571429 L8,17.8571429 C8.63085714,17.8571429 9.14285714,18.3691429 9.14285714,19 C9.14285714,19.6308571 9.65485714,20.1428571 10.2857143,20.1428571 L32,20.1428571 L13.8662857,17.0154286 C12.4971429,16.5394286 12.4971429,14.6034286 13.8662857,14.1274286 L32,11 L10.2857143,11 C9.65485714,11 9.14285714,11.512 9.14285714,12.1428571 C9.14285714,12.7737143 8.63085714,13.2857143 8,13.2857143 L0,13.2857143 Z"
+          fill="currentColor"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-knife" viewBox="0 0 32 32" version="1.1">
+      <title>knife</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,13 L32,13 C32,13 26.8,19.4 11.2,19.4 L11.2,15.8 L1.2,15.8 L0,13 Z" fill="currentColor"></path>
+      </g>
+    </symbol>
+  </defs>
+</svg>
 
 <script src="bundle.js" async></script>
 </body>

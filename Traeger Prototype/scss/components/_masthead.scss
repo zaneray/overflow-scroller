@@ -1,0 +1,47 @@
+.masthead {
+    background: $mdc-theme-background;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-masthead;
+    text-align: center;
+    transition: $transition-base;
+    position: absolute;
+
+    &.fixed {
+        position: fixed;
+        transform: translateY(-100%);
+
+        &.active {
+            transform: translateY($masthead-promo-height * -1);
+        }
+
+        &.active.default {
+            transform: translateY(0);
+        }
+    }
+
+
+}
+
+
+.masthead-promo-bar {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    padding: .5rem;
+    background: $color-neutral-800;
+}
+
+.masthead-primary {
+    height: $masthead-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.faux-link {
+    color: $color-warm-400;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+}

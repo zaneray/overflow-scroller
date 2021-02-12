@@ -1,0 +1,73 @@
+.hero-grill {
+
+    background-color: $color-neutral-900;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+
+}
+
+
+.hero-grill-content {
+    padding-left: $gutter-flexible;
+    padding-right: $gutter-flexible;
+    height: 80vh;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.hero-grill-body {
+    max-width: 36rem;
+    margin: 0 auto;
+
+
+    @media screen and (min-width: $screen-lg) {
+        max-width: 38vw;
+    }
+}
+
+.hero-grill-image-section {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.hero-grill-image-wrapper {
+    margin: 0 auto -10% auto;
+    width: 100%;
+    @media screen and (min-width: $screen-lg) {
+        width: 50vw;
+
+    }
+}
+
+.hero-grill-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: -20%;
+    z-index: $z-index-page + 1;
+    display: block;
+    //transform: translate(-50%, 20%);
+}
+
+.hero-grill-smoke {
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 110%;
+    opacity: .8;
+    z-index: $z-index-page;
+
+    &:nth-child(2) {
+       transform: scaleX(-1);
+        opacity: .5;
+        right: 0;
+        left: auto;
+    }
+}

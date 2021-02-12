@@ -1,0 +1,26 @@
+.cascading-cards {
+    background-color: $color-warm-50;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.content-card {
+    padding: $gutter-flexible * 2;
+    background: $color-neutral-300;
+    width: 80%;
+    height: 40vw;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: $gutter-flexible * -2;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+        margin-left: auto;
+        background: $color-neutral-200;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

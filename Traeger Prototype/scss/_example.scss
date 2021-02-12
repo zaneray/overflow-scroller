@@ -1,0 +1,23 @@
+.container {
+    //max-width: 1200px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 112px auto;
+    display: flex;
+}
+
+.cell {
+    padding: 2vw;
+    background: #eee;
+    width: 50%;
+
+    &:nth-child(1) {
+        background: #ddd;
+    }
+}
+
+.cell-copy {
+    max-width: 540px;
+}
+
+

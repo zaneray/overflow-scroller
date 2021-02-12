@@ -1,0 +1,32 @@
+@use "@material/button";
+
+@include button.core-styles;
+
+.mdc-button {
+    @include headlineType;
+    font-size: 1.25rem;
+    letter-spacing: $letterSpacing;
+}
+
+.mdc-button.button-icon {
+    &.mdc-theme--on-primary {
+        color: $on-primary;
+    }
+
+    .mdc-button__label {
+        margin-right: .5rem;
+    }
+
+    .svg-icon {
+        transition: $transition-base;
+        color: $color-primary;
+    }
+
+
+    &:hover {
+        .svg-icon {
+            transform: translateX(15%);
+        }
+    }
+
+}

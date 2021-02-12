@@ -1,3 +1,34 @@
-$mdc-theme-primary: #26418f;
+
+// ZR custom colors
+$color-primary: #D95E16;
+$color-primary-dark: #C34F0B;
+
+$color-neutral-50: #f7f7f7; // negative type color
+$color-neutral-100: #ecedee;
+$color-neutral-200: #d0d3d4;
+$color-neutral-300: #b3b5b6;
+$color-neutral-400: #959899;
+$color-neutral-500: #666869;
+$color-neutral-600: #42474a;
+$color-neutral-700: #3a3d3f;
+$color-neutral-800: #25282a; // positive type color
+$color-neutral-900: #1a1a1a;
+
+
+$color-warm-50: #F6F4F3; // light BG
+$color-warm-100: #eceae8;
+$color-warm-200: #e1dedb;
+$color-warm-300: #cbc6c0;
+$color-warm-400: #b4ada5;  // Ash
+$color-warm-500: #a49d98;
+$color-warm-600: #958c86;
+$color-warm-700: #867d75;
+$color-warm-800: #776c64; // positive type color
+$color-warm-900: #685c53;
+
+
 $mdc-theme-secondary: #d1c4e9;
-$mdc-theme-background: #fdf6f9;
+$mdc-theme-background:$color-neutral-900;
+$on-primary: $color-neutral-50;
+$on-secondary: #442b2d;
+

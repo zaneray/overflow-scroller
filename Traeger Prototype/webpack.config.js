@@ -1,7 +1,7 @@
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = [{
   mode: 'development',
@@ -34,8 +34,14 @@ module.exports = [{
             },
           },
           {loader: 'extract-loader'},
-          {loader: 'css-loader'},
-          {loader: 'sass-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            }
+          },
+          {
+            loader: 'sass-loader',
             options: {
               // Prefer Dart Sass
               implementation: require('sass'),
@@ -53,7 +59,7 @@ module.exports = [{
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        options:{
+        options: {
           presets: ['@babel/preset-env']
         }
       }

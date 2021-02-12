@@ -1,15 +1,32 @@
 @import "@material/typography/mdc-typography";
 
+
+
 .mdc-typography--headline1,
 .mdc-typography--headline2,
 .mdc-typography--headline3,
 .mdc-typography--headline4,
 .mdc-typography--headline5,
 .mdc-typography--headline6 {
-    font-family: Knockout;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: .8em
+    @include headlineType;
+}
+
+.mdc-typography--subtitle1,
+.mdc-typography--subtitle2 {
+    @include headlineType;
+    letter-spacing: $letterSpacing;
+}
+
+
+.mdc-typography--body1 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+
+.body--flexible {
+    font-size: calc(.75rem + .5vw);
+    line-height: 1.75;
 }
 
 
@@ -18,11 +35,21 @@
 }
 
 .headline--flexible {
- &.mdc-typography--headline1 {
-     font-size:  11.111vw;
-     @media screen and (min-width: $mdc-) {
+    &.mdc-typography--headline1 {
+        font-size: 20vw;
+        @media screen and (min-width: $screen-sm) {
+            font-size: 9vw;
+        }
+    }
+}
 
-     }
- }
+
+.headline--flexible {
+    &.mdc-typography--headline2 {
+        font-size: 16vw;
+        @media screen and (min-width: $screen-sm) {
+            font-size: 6vw;
+        }
+    }
 }
 

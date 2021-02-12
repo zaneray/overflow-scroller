@@ -1,1 +1,34 @@
 @use "@material/layout-grid/mdc-layout-grid";
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $color-neutral-900;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.page {
+    top: $masthead-height-combined;
+    position: relative;
+
+}
+
+
+.mdc-layout-grid {
+    padding-left: $gutter-flexible * 2;
+    padding-right: $gutter-flexible * 2;
+}
+
+
+

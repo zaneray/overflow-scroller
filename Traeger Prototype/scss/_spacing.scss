@@ -17,3 +17,25 @@
         }
     }
 }
+
+
+
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    &-large {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+        }
+    }
+}

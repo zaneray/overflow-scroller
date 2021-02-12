@@ -1,4 +1,56 @@
 .hero-banner {
     position: relative;
-    height: 100vh;
+    // height: calc(100vh - #{$masthead-height});
+    height: calc(100vh - #{$masthead-height});
+    z-index: $z-index-page;
+    // top:  $masthead-height;
+    background-color: $mdc-theme-background;
+    @media screen and (min-width: $screen-sm) {
+       // height: calc(56.25vw - 220px);
+        min-height: 480px;
+        //height: calc(100vh - #{$masthead-height});
+    }
+
+}
+
+.hero-banner-image {
+    position: absolute;
+    z-index: $z-index-page + 1;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: opacity 1s $transition-quad;
+}
+
+.hero-banner-content {
+    position: absolute;
+    z-index: $z-index-page + 2;
+    background: radial-gradient(circle, rgba(0,0,0,.5) 18%, rgba(0,0,0,0) 100%);
+    background-size: auto 100%;
+    padding: $gutter-flexible * 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner-headline {
+    margin-bottom: $gutter-flexible * 2;
+    margin-top: 0;
+    @media screen and (min-width: $screen-sm) {
+        margin-bottom: $gutter-flexible;
+    }
+}
+
+.hero-banner-wordmark {
+    width: 58vw;
+    margin-bottom: $gutter-flexible * 2;
+    @media screen and (min-width: $screen-sm) {
+        width:18vw;
+        margin-bottom: $gutter-flexible;
+    }
 }
